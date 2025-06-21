@@ -12,7 +12,7 @@ let isSecondImage = false;
 img.addEventListener("click", function () {
   if (!isSecondImage) {
     // OFF 
-    img.src = "pandaman.png"; // 2枚目の画像 (pandaman.png)  // 1枚目→2枚目に切り替え
+    img.src = "img/pandaman.png"; // 2枚目の画像 (pandaman.png)  // 1枚目→2枚目に切り替え
     leftMenu.style.display = "flex"; // 左メニュー表示
     rightMenu.style.display = "flex"; 
     UpMenu.style.display = "flex";
@@ -25,7 +25,7 @@ img.addEventListener("click", function () {
     }
   } else {
     
-    img.src = "panda3.png"; // 1枚目の画像 (pandaman2.png)  // 2枚目→1枚目に戻す
+    img.src = "img/panda3.png"; // 1枚目の画像 (pandaman2.png)  // 2枚目→1枚目に戻す
     leftMenu.style.display = "none"; // 左メニュー非表示
     rightMenu.style.display = "none"; 
     UpMenu.style.display = "none";
