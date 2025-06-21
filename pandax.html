@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自己紹介ってなにするん</title>
+    <link rel="stylesheet" href="pandax.css">
+</head>
+<body>
+    <!--三本線関連 -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="side-menu" id="sideMenu">
+        <ul>
+            <li><a href="pandax.html">HOME</a></li>
+            <li><a href="#favorite">自分の好きなこと</a></li>
+            <li><a href="#device">普段使っている電子機器</a></li>
+            <li><a href="#language">プログラミング言語について個人の見解</a></li>
+            <li><a href="#free1">お問い合わせ</a></li>
+            <li><a href="#free2">自由枠</a></li>
+        </ul>
+    </div>
+    
+    
+    <div class="moepanda"></div>
+    
+
+
+    <div class="top-row">
+        <a href="jikoshoukai.html">自己紹介</a>
+        <a href="#suki">自分の好きなこと</a>
+        <a href="#aaaaa">普段使っている電子機器</a>
+        <a href="#free">プログラミング言語について個人の見解</a>
+        <a href="#free1">お問い合わせ</a>
+        <a href="#free2">自由枠</a>
+    </div>
+    <div class="center-container">
+        <p id="statusText">OFF</p>
+        <img id="clickImage" src="panda3.png" style="width:200px; cursor: pointer;" alt="画像">
+
+  <section>
+    <div id="leftMenu" class="circle-menu" style="display: none;">     <!--メニューバー　-->
+            <a href="#suki">自分の好きなこと</a>
+        </div>
+
+        <div id="rightMenu" class="circle-menu" style="display: none;">
+            <a href="jikoshoukai.html">自己紹介</a>
+        </div>
+
+        <div id="UpMenu" class="circle-menu" style="display: none;">
+            <a href="jikoshoukai.html">普段使っている電子機器</a>
+        </div>
+
+        <div id="DownMenu" class="circle-menu" style="display: none;">
+            <a href="jikoshoukai.html">お問い合わせ</a>
+        </div>
+
+        <div id="moe1" class="circle-menu" style="display: none;">
+            <a href="jikoshoukai.html">プログラミング言語について</a>
+        </div>
+
+        <div id="moe2" class="circle-menu" style="display: none;">
+            <a href="jikoshoukai.html">自由枠</a>
+        </div>
+  </section>
+        
+
+<script src="pandax.js"></script>
+
+       
+        <div class="menu" id="menu">
+            
+        </div>
+    </div>
+
+    <div id="menuOverlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:120;"></div>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('sideMenu');
+            const overlay = document.getElementById('menuOverlay');
+            const isOpen = menu.classList.toggle('open');
+            overlay.style.display = isOpen ? 'block' : 'none';
+        }
+        document.getElementById('menuOverlay').onclick = function() {
+            document.getElementById('sideMenu').classList.remove('open');
+            this.style.display = 'none';
+        };
+    </script>
+</body>
+</html>
