@@ -2,6 +2,7 @@
 body {
 .parent-center {
   position: relative;
+ 
   width: 100vw;
   height: 100vh;
 }
@@ -222,7 +223,7 @@ body {
 }
 body {
             font-family: 'Noto Sans JP', sans-serif;
-            background-color: #f4f7f6; /* 背景色を少し変更 */
+           
         }
 
         /* ページ全体のコンテナ設定 */
@@ -263,7 +264,14 @@ body {
             line-height: 1.8;
             color: #555;
         }
-        
+         .content-text h2 a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+        .content-text h2 a:hover {
+            color: #007bff; /* ホバー時の色 */
+        }
 
 
 
