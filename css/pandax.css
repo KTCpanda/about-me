@@ -2,7 +2,6 @@
 body {
 .parent-center {
   position: relative;
- 
   width: 100vw;
   height: 100vh;
 }
@@ -151,7 +150,9 @@ body {
 }/*ここからさいきんのやつ*/
 
 .circle-menu {
-    
+    position: absolute;
+    top: 50%; /*上下*/
+    transform: translateY(-50%);
     width: 100px; /* サイズを調整 */
     height: 100px; /* サイズを調整 */
     background-color: white;
@@ -163,20 +164,10 @@ body {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     transition: transform 0.2s ease-in-out; /* スムーズな拡大縮小のためのやつ */
-
-    /* アニメーションの共通設定 */
-    aspect-ratio: 1;
-    offset-path: path('M 50,50 m -350,0 a 350,250 0 1,0 700,0 a 350,250 0 1,0 -700,0');
-    offset-rotate: 0deg;
-    animation: move 20s linear infinite;
-    position: absolute;
-    top: 54%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .circle-menu:hover {
-    transform: translate(-50%, -50%) scale(1.1); /* X軸の変位も考慮 */
+    transform: translateY(-50%) scale(1.1); /* Y軸の変位を維持しつつ1.1倍に拡大 */
 }
 
 .circle-menu a {
@@ -186,32 +177,62 @@ body {
 }
 
 #leftMenu {
-    border: 3px solid #b9d7f5;
-    animation-delay: 0s;
+    left: 400px; /* 画像からの距離を調整 */
+    border: 3px solid #b9d7f5
 }
 
 #rightMenu {
-    border: 3px solid #b9d7f5;
-    animation-delay: -3.33s;
+    right: 400px; 
+    border: 3px solid #b9d7f5
 }
 
 #UpMenu {
-    border: 3px solid #b9d7f5;
-    animation-delay: -6.67s;
+    top: 200px;
+    right: 500px;
+    border: 3px solid #b9d7f5
 }
 #DownMenu {
-    border: 3px solid #b9d7f5;
-    animation-delay: -10s;
+    top: 200px;
+    left: 500px;
+    border: 3px solid #b9d7f5
 }
 #moe1 {
-    border: 3px solid #b9d7f5;
-    animation-delay: -13.33s;
+    top: 570px;
+    left: 500px;
+    border: 3px solid #b9d7f5
 }
 #moe2 {
+    top: 570px;
+    left: 900px;
+    border: 3px solid #b9d7f5
+}
+#moe2 {
+    width: 5rem;
+    aspect-ratio: 1;
     border: 3px solid #b9d7f5;
-    animation-delay: -16.67s;
+    background-color:  white; 
+    offset-path: path('M253.547 18.8186C290.075 -5.84582 337.925 -5.84584 374.453 18.8186L468.868 82.5685C477.762 88.5735 487.5 93.2199 497.763 96.3547L555.264 113.918C625.127 135.257 650.337 221.13 603.096 276.848V276.848C592.068 289.856 584.49 305.43 581.06 322.135L574.374 354.699C563.083 409.691 511.553 446.871 455.805 440.248L326.745 424.914C318.278 423.908 309.722 423.908 301.254 424.914L172.195 440.248C116.447 446.871 64.9169 409.691 53.626 354.699L46.9401 322.135C43.5102 305.43 35.9321 289.856 24.9036 276.848V276.848C-22.3372 221.13 2.87312 135.257 72.7364 113.918L130.237 96.3547C140.5 93.2199 150.238 88.5735 159.132 82.5685L253.547 18.8186Z');
+    animation: move 27s linear infinite;
+    position: absolute;
+    top: 20%;
+    left: 30%;
 }
 
+/*.moepanda {
+    width: 5rem;
+    aspect-ratio: 1;
+    background: no-repeat center /
+    contain url(./panda3.png);
+    offset-path: path('M253.547 18.8186C290.075 -5.84582 337.925 -5.84584 374.453 18.8186L468.868 82.5685C477.762 88.5735 487.5 93.2199 497.763 96.3547L555.264 113.918C625.127 135.257 650.337 221.13 603.096 276.848V276.848C592.068 289.856 584.49 305.43 581.06 322.135L574.374 354.699C563.083 409.691 511.553 446.871 455.805 440.248L326.745 424.914C318.278 423.908 309.722 423.908 301.254 424.914L172.195 440.248C116.447 446.871 64.9169 409.691 53.626 354.699L46.9401 322.135C43.5102 305.43 35.9321 289.856 24.9036 276.848V276.848C-22.3372 221.13 2.87312 135.257 72.7364 113.918L130.237 96.3547C140.5 93.2199 150.238 88.5735 159.132 82.5685L253.547 18.8186Z');
+    animation: move 3s linear infinite;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+}
+    */
+/* 
+
+*/
 
 @keyframes move{
     0% {
@@ -221,57 +242,10 @@ body {
         offset-distance: 100%;
     }
 }
-body {
-            font-family: 'Noto Sans JP', sans-serif;
-           
-        }
 
-        /* ページ全体のコンテナ設定 */
-        .center-container {
-            width: 100%;
-            max-width: 1000px; /* 900pxから1000pxに拡大 */
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
 
-        
 
-        /* 各コンテンツセクションのスタイル */
-        .content-section {
-            display: flex;
-            align-items: center;
-            gap: 40px; /* 30pxから40pxに拡大 */
-            background: #ffffff;
-            padding: 40px; /* 30pxから40pxに拡大 */
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-            margin-bottom: 40px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        /* ... */
-        /* テキストのスタイル */
-        .content-text h2 {
-            font-family: 'Merriweather', serif;
-            font-size: 2rem; /* 1.8remから2remに拡大 */
-            color: #2c3e50;
-            margin-top: 0;
-            margin-bottom: 15px;
-            padding-left: 15px;
-            border-left: 4px solid #4a90e2;
-        }
-        .content-text p {
-            font-size: 1.05rem; /* 1remから1.05remに拡大 */
-            line-height: 1.8;
-            color: #555;
-        }
-         .content-text h2 a {
-            text-decoration: none;
-            color: inherit;
-            transition: color 0.3s;
-        }
-        .content-text h2 a:hover {
-            color: #007bff; /* ホバー時の色 */
-        }
+
 
 
 
