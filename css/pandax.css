@@ -220,72 +220,50 @@ body {
         offset-distance: 100%;
     }
 }
-/* ページ全体のコンテナ設定 */
+body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f4f7f6; /* 背景色を少し変更 */
+        }
+
+        /* ページ全体のコンテナ設定 */
         .center-container {
             width: 100%;
-            max-width: 900px; /* コンテンツの最大幅 */
+            max-width: 1000px; /* 900pxから1000pxに拡大 */
             margin: 0 auto;
-            padding: 20px;
+            padding: 40px 20px;
         }
+
+        
 
         /* 各コンテンツセクションのスタイル */
         .content-section {
             display: flex;
             align-items: center;
-            gap: 30px;
+            gap: 40px; /* 30pxから40pxに拡大 */
             background: #ffffff;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-            margin-bottom: 30px;
+            padding: 40px; /* 30pxから40pxに拡大 */
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            margin-bottom: 40px;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
-
-        /* 画像とテキストのコンテナ */
-        .content-image, .content-text {
-            flex: 1; /* 1:1の比率で分割 */
-        }
-
-        /* 画像のスタイル */
-        .content-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            display: block;
-        }
-
+        /* ... */
         /* テキストのスタイル */
         .content-text h2 {
-            font-size: 1.8rem;
-            color: #333;
+            font-family: 'Merriweather', serif;
+            font-size: 2rem; /* 1.8remから2remに拡大 */
+            color: #2c3e50;
             margin-top: 0;
             margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 4px solid #4a90e2;
         }
         .content-text p {
-            font-size: 1rem;
-            line-height: 1.7;
+            font-size: 1.05rem; /* 1remから1.05remに拡大 */
+            line-height: 1.8;
             color: #555;
         }
-
-        /* 画像を右側に配置するクラス */
-        .content-section.image-right {
-            flex-direction: row-reverse;
-        }
-
-        /* レスポンシブ対応 (スマホなど) */
-        @media (max-width: 768px) {
-            .content-section {
-                flex-direction: column; /* 縦積みに変更 */
-                padding: 20px;
-            }
-            /* スマホでは画像の左右反転をリセット */
-            .content-section.image-right {
-                flex-direction: column;
-            }
-        }
-
-
-
-
+        
 
 
 
