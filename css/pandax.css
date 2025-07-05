@@ -150,9 +150,7 @@ body {
 }/*ここからさいきんのやつ*/
 
 .circle-menu {
-    position: absolute;
-    top: 50%; /*上下*/
-    transform: translateY(-50%);
+    
     width: 100px; /* サイズを調整 */
     height: 100px; /* サイズを調整 */
     background-color: white;
@@ -164,10 +162,20 @@ body {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     transition: transform 0.2s ease-in-out; /* スムーズな拡大縮小のためのやつ */
+
+    /* アニメーションの共通設定 */
+    aspect-ratio: 1;
+    offset-path: path('M 50,50 m -350,0 a 350,250 0 1,0 700,0 a 350,250 0 1,0 -700,0');
+    offset-rotate: 0deg;
+    animation: move 10s linear infinite;
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .circle-menu:hover {
-    transform: translateY(-50%) scale(1.1); /* Y軸の変位を維持しつつ1.1倍に拡大 */
+    transform: translate(-50%, -50%) scale(1.1); /* X軸の変位も考慮 */
 }
 
 .circle-menu a {
@@ -177,46 +185,30 @@ body {
 }
 
 #leftMenu {
-    left: 400px; /* 画像からの距離を調整 */
-    border: 3px solid #b9d7f5
+    border: 3px solid #b9d7f5;
+    animation-delay: 0s;
 }
 
 #rightMenu {
-    right: 400px; 
-    border: 3px solid #b9d7f5
+    border: 3px solid #b9d7f5;
+    animation-delay: -1.67s;
 }
 
 #UpMenu {
-    top: 200px;
-    right: 500px;
-    border: 3px solid #b9d7f5
+    border: 3px solid #b9d7f5;
+    animation-delay: -3.33s;
 }
 #DownMenu {
-    top: 200px;
-    left: 500px;
-    border: 3px solid #b9d7f5
+    border: 3px solid #b9d7f5;
+    animation-delay: -5s;
 }
 #moe1 {
-    top: 570px;
-    left: 500px;
-    border: 3px solid #b9d7f5
+    border: 3px solid #b9d7f5;
+    animation-delay: -6.67s;
 }
 #moe2 {
-    top: 570px;
-    left: 900px;
-    border: 3px solid #b9d7f5
-}
-#moe2 {
-    aspect-ratio: 1;
-    border: 3px solid #b9d7f5; 
-    offset-path: path('M 50,50 m -350,0 a 350,250 0 1,0 700,0 a 350,250 0 1,0 -700,0');
-    offset-rotate: 0deg;
-    animation: move 10s linear infinite;
-    animation-delay: -3.5s;
-    position: absolute;
-    top: 50%;
-    left: 45%;
-    transform: translate(-50%, -50%);
+    border: 3px solid #b9d7f5;
+    animation-delay: -8.33s;
 }
 
 /*.moepanda {
