@@ -210,7 +210,9 @@ body {
     aspect-ratio: 1;
     border: 3px solid #b9d7f5; 
     offset-path: path('M 50,50 m -350,0 a 350,250 0 1,0 700,0 a 350,250 0 1,0 -700,0');
+    offset-rotate: 0deg;
     animation: move 10s linear infinite;
+    animation-delay: -3.5s;
     position: absolute;
     top: 50%;
     left: 45%;
