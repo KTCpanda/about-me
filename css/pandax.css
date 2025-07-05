@@ -220,6 +220,68 @@ body {
         offset-distance: 100%;
     }
 }
+/* ページ全体のコンテナ設定 */
+        .center-container {
+            width: 100%;
+            max-width: 900px; /* コンテンツの最大幅 */
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* 各コンテンツセクションのスタイル */
+        .content-section {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+        }
+
+        /* 画像とテキストのコンテナ */
+        .content-image, .content-text {
+            flex: 1; /* 1:1の比率で分割 */
+        }
+
+        /* 画像のスタイル */
+        .content-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+        }
+
+        /* テキストのスタイル */
+        .content-text h2 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        .content-text p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        /* 画像を右側に配置するクラス */
+        .content-section.image-right {
+            flex-direction: row-reverse;
+        }
+
+        /* レスポンシブ対応 (スマホなど) */
+        @media (max-width: 768px) {
+            .content-section {
+                flex-direction: column; /* 縦積みに変更 */
+                padding: 20px;
+            }
+            /* スマホでは画像の左右反転をリセット */
+            .content-section.image-right {
+                flex-direction: column;
+            }
+        }
 
 
 
