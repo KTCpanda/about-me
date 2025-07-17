@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>自己紹介ってなにするん</title>
     <link rel="stylesheet" href="css/pandax.css">
+    <style>
+        body {
+            background-image: url('img/in.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            
+        }
+    </style>
 </head>
 <body>
     <!--三本線関連 -->
@@ -77,17 +86,6 @@
     </div>
 
     <div id="menuOverlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:120;"></div>
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('sideMenu');
-            const overlay = document.getElementById('menuOverlay');
-            const isOpen = menu.classList.toggle('open');
-            overlay.style.display = isOpen ? 'block' : 'none';
-        }
-        document.getElementById('menuOverlay').onclick = function() {
-            document.getElementById('sideMenu').classList.remove('open');
-            this.style.display = 'none';
-        };
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>

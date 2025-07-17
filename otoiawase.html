@@ -69,7 +69,7 @@
     </div>
     <div class="center-container">
         <h1>お問い合わせ</h1>
-        <form action="#" method="post" class="contact-form">
+        <form id="contactForm" action="#" method="post" class="contact-form">
             <div class="form-group">
                 <label for="name">お名前</label>
                 <input type="text" id="name" name="name" required>
@@ -84,18 +84,21 @@
             </div>
             <button type="submit" class="submit-btn">送信</button>
         </form>
+        <div id="thanksMessage" style="display:none; text-align:center; font-size:1.2em; color:green; margin-top:20px;">
+            無事に送信されました。多分(笑)
+        </div>
+        <div>
+            <a href="index.html">HOMEに戻る</a>
+        </div>
     </div>
     <div id="menuOverlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:120;"></div>
+           <script src="js/main.js"></script>
     <script>
-        function toggleMenu() {
-            const menu = document.getElementById('sideMenu');
-            const overlay = document.getElementById('menuOverlay');
-            const isOpen = menu.classList.toggle('open');
-            overlay.style.display = isOpen ? 'block' : 'none';
-        }
-        document.getElementById('menuOverlay').onclick = function() {
-            document.getElementById('sideMenu').classList.remove('open');
+        // フォーム送信時の処理
+        document.getElementById('contactForm').onsubmit = function(e) {
+            e.preventDefault();
             this.style.display = 'none';
+            document.getElementById('thanksMessage').style.display = 'block';
         };
     </script>
 </body>

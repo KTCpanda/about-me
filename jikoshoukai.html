@@ -29,18 +29,7 @@
         <a href="index.html">HOME</a>
     </div>
     <div id="menuOverlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:120;"></div>
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('sideMenu');
-            const overlay = document.getElementById('menuOverlay');
-            const isOpen = menu.classList.toggle('open');
-            overlay.style.display = isOpen ? 'block' : 'none';
-        }
-        document.getElementById('menuOverlay').onclick = function() {
-            document.getElementById('sideMenu').classList.remove('open');
-            this.style.display = 'none';
-        };
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
 
