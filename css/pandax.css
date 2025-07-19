@@ -117,6 +117,17 @@ body {
     transition: 0.3s;
 }
 
+/* ハンバーガーがopenになった時のスタイル */
+.hamburger.open span:nth-child(1) {
+    transform: translateY(15.5px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-15.5px) rotate(-45deg);
+}
+
 /* なかみ */
 .side-menu {
     position: fixed;
