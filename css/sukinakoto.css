@@ -3,7 +3,6 @@
         gap: 20px;
         justify-content: center;
         margin: 40px 0;
-        flex-wrap: wrap; /* 写真が画面幅に応じて折り返されるように */
     }
 
     .gallery-item {
@@ -17,10 +16,8 @@
 
     .gallery-item img {
         width: 100%;
-        max-width: 250px; /* 写真の最大幅を設定 */
         height: auto;
         display: block;
-        border-radius: 10px; /* 角丸を少し小さく */
     }
 
     .gallery-item:hover {
