@@ -14,35 +14,44 @@
 
         /* === 1. 上部：背景画像のセクション === */
         .image-section {
-            background-image: url('img/inBB8,jpg'); /* 背景画像を指定 */
+            position: relative;
+            overflow: hidden;
+            padding-bottom: 50px; /* 余白 */
+        }
+
+        .image-section::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url("img/kaigai.jpg");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
-            padding-bottom: 50px; /* セクションの下に余白を追加 */
+            filter: blur(3px); /* ぼかし効果 */
+            z-index: -1;
         }
         
         /* === 2. 下部：白い背景のセクション === */
         .white-section {
-            background-color: #fff; /* 背景色を白に指定 */
-            padding: 40px 20px; /* 上下左右に余白を追加 */
+            background-color: #fff;
+            padding: 40px 20px; 
         }
         
-        /* h1（Panda）のスタイル */
+        /* h1（Panda）*/
         h1 {
             color: #d41010;
-            margin: 100px 0 0 0; /* 上に100pxの余白、他は0 */
+            margin: 100px 0 0 0; 
 
             text-shadow: 2px 8px 4px rgba(0, 0, 0, 0.5);
             font-size: 4em;
             text-align: center;
         }
         
-        /* h2（panda）のスタイル */
+        /* h2（panda） */
         h2 {
             text-align: center;
         }
-
-        /* 元のコードにあった他のスタイルは pandax.css に含まれていると仮定します */
 
     </style>
 </head>
