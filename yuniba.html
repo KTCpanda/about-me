@@ -3,10 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>好きなこと</title>
+    <title>ユニバーサル・スタジオ・ジャパン</title>
     <link rel="stylesheet" href="css/pandax.css">
 </head>
 <body>
+    <div class="shooting-stars"><!--パンダの流れ星-->
+        <div class="star"><img src="img/panda3.png" alt="panda star"></div>
+        <div class="star"><img src="img/pandaman.png" alt="panda star"></div>
+        <div class="star"><img src="img/panda3.png" alt="panda star"></div>
+        <div class="star"><img src="img/pandaman.png" alt="panda star"></div>
+        <div class="star"><img src="img/panda3.png" alt="panda star"></div>
+    </div>
     <!--三本線関連 -->
     <div class="hamburger" onclick="toggleMenu()">
         <span></span>
@@ -17,16 +24,46 @@
         <ul>
             <li><a href="index.html">HOME</a></li>
             <li><a href="sukinakoto.html">自分の好きなこと</a></li>
-            <li><a href="#device">普段使っている電子機器</a></li>
-            <li><a href="#language">プログラミング言語について個人の見解</a></li>
+            <li><a href="shoping.html">ショッピング</a></li>
             <li><a href="otoiawase.html">お問い合わせ</a></li>
-            <li><a href="#free2">自由枠</a></li>
         </ul>
     </div>
-    <div class="center-container">
+
+    <div class="shopping-container">
         <h1>ユニバーサル・スタジオ・ジャパン</h1>
 
+        <div class="item-card">
+            <div class="item-image">
+                <img src="img/yuniba.jpg" alt="ユニバの風景">
+            </div>
+            <div class="item-description">
+                <h2>非日常の世界へ</h2>
+                <p>ゲートをくぐった瞬間から、映画の世界に入り込んだような気分になれます。季節ごとのイベントやショーも魅力で、何度行っても新しい発見があります。</p>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-image">
+                <img src="img/inBB8.jpg" alt="BB-8">
+            </div>
+            <div class="item-description">
+                <h2>大好きなキャラクター</h2>
+                <p>パーク内では、たくさんのキャラクターに出会えます。特にスター・ウォーズのBB-8に会えた時は感動しました。一緒に写真を撮るのが最高の思い出です。</p>
+            </div>
+        </div>
+
+        <div class="item-card">
+            <div class="item-image">
+                <img src="img/inBB8.jpg" alt="アトラクション">
+            </div>
+            <div class="item-description">
+                <h2>スリル満点のアトラクション</h2>
+                <p>絶叫系から、世界観に浸れるものまで、様々なアトラクションがあります。ハリー・ポッター・アンド・ザ・フォービドゥン・ジャーニーは、本当に空を飛んでいるような感覚で最高です。</p>
+            </div>
+        </div>
+
     </div>
+
     <div id="menuOverlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:120;"></div>
     <script src="js/main.js"></script>
 </body>
