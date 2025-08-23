@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>好きなこと</title>
+    <title>ショッピング</title>
     <link rel="stylesheet" href="css/pandax.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <div class="shooting-stars">
+        <div class="star"><img src="img/panda3.png" alt="panda star"></div>
+        <div class="star"><img src="img/pandaman.png" alt="panda star"></div>
+        <div class="star"><img src="img/panda3.png" alt="panda star"></div>
+        <div class="star"><img src="img/pandaman.png" alt="panda star"></div>
+        <div class="star"><img src="img/panda3.png" alt="panda star"></div>
+    </div>
     <!--三本線関連 -->
     <div class="hamburger" onclick="toggleMenu()">
         <span></span>
@@ -17,34 +26,46 @@
         <ul>
             <li><a href="index.html">HOME</a></li>
             <li><a href="sukinakoto.html">自分の好きなこと</a></li>
-            <li><a href="#device">普段使っている電子機器</a></li>
-            <li><a href="#language">プログラミング言語について個人の見解</a></li>
+            <li><a href="shoping.html">ショッピング</a></li>
             <li><a href="otoiawase.html">お問い合わせ</a></li>
-            <li><a href="#free2">自由枠</a></li>
         </ul>
     </div>
-    <div class="center-container">
+
+    <div class="shopping-container">
         <h1>ショッピング</h1>
 
-    </div>
-    <div class="gallery">
-        <div class="gallery-item">
-            <img src="img/baru.jpg" alt="ショッピングの写真1" style="width: 500px; height: 500px; object-fit: cover;">
-        <p>ショッピングは単なる買い物ではなく、日常の中で新しい発見を楽しむ時間です。最新のトレンドをチェックしながら、お気に入りのアイテムを探すのはとてもワクワクします。特に、友人や家族へのプレゼントを選ぶ時間は、心温まるひとときです。</p>
-            
+        <div class="item-card">
+            <div class="item-image">
+                <img src="img/baru.jpg" alt="新しい服">
+            </div>
+            <div class="item-description">
+                <h2>新しい服</h2>
+                <p>最近買ったお気に入りの服。デザインがとても気に入っています。これを着て出かけるのが楽しみです。</p>
+            </div>
         </div>
-        <div class="gallery-item">
-            <img src="img/pandaox.jpg" alt="ショッピングの写真2" style="width: 500px; height: 500px; object-fit: cover;">
+
+        <div class="item-card">
+            <div class="item-image">
+                <img src="img/kaigai.jpg" alt="海外のマーケット">
+            </div>
+            <div class="item-description">
+                <h2>海外のマーケット</h2>
+                <p>旅行先で見つけた素敵なマーケット。珍しい雑貨や食べ物がたくさんあって、歩いているだけでワクワクしました。</p>
+            </div>
         </div>
-        <div class="gallery-item">
-            <img src="img/tenshi.jpg" alt="ショッピングの写真3" style="width: 500px; height: 500px; object-fit: cover;">
+
+        <div class="item-card">
+            <div class="item-image">
+                <img src="img/tenshi.jpg" alt="天使の置物">
+            </div>
+            <div class="item-description">
+                <h2>天使の置物</h2>
+                <p>一目惚れして購入した天使の置物。部屋に飾るだけで、なんだか癒やされます。お気に入りのインテリアの一つです。</p>
+            </div>
         </div>
+
     </div>
 
-    <div class="shopping-description">
-        <h2>ショッピングの魅力</h2>
-        <p>ショッピングは単なる買い物ではなく、日常の中で新しい発見を楽しむ時間です。最新のトレンドをチェックしながら、お気に入りのアイテムを探すのはとてもワクワクします。特に、友人や家族へのプレゼントを選ぶ時間は、心温まるひとときです。</p>
-    </div>
     <div id="menuOverlay" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:120;"></div>
     <script src="js/main.js"></script>
 </body>
