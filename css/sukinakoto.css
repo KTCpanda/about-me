@@ -42,4 +42,27 @@
         color: #555;
     }
 
+    .content-section-link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+        margin-bottom: 40px;
+    }
+
+    .content-section {
+        display: flex;
+        align-items: center;
+        gap: 40px; 
+        background: #ffffff;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .content-section:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+    }
+
 
