@@ -246,7 +246,7 @@ body {
 }
 
 .circle-menu:hover {
-    transform: translate(-50%, -50%) scale(1.1); /* X軸の変位も考慮 */
+    transform: translate(-50%, -50%) scale(1.1); /* X軸の変位もみる */
 }
 
 .circle-menu a {
@@ -299,7 +299,7 @@ body {
         /* ページ全体のコンテナ設定 */
         .center-container {
             width: 100%;
-            max-width: 1000px; /* 900pxから1000pxに拡大 */
+            max-width: 1000px; 
             margin: 0 auto;
             padding: 40px 20px;
         }
@@ -348,7 +348,7 @@ body {
     color: inherit;
     display: block;
     margin-bottom: 40px;
-    border-radius: 20px; /* 親のaタグに角丸を設定 */
+    border-radius: 20px; /* 親のaタグに角丸を */
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -432,7 +432,7 @@ body {
     width: 50px; /* パンダのサイズ */
     height: 50px;
     animation: shooting-star 10s linear infinite;
-    animation-fill-mode: backwards; /* アニメーション開始前のスタイルを適用 */
+    animation-fill-mode: backwards; /* アニメーション開始前のスタイル */
 }
 
 .star img {
