@@ -68,31 +68,87 @@ body {
     color: #1976d2;
 }
 
-.top-row {
+.top-header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    height: 12.5vh; 
-    width:  100vw;
-    background: #f8f8ff;
-    gap: 2vw;
+    padding: 10px 3%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 10;
+    width: 100%;
+    z-index: 100;
+    box-sizing: border-box;
 }
-.top-row a {
-    color: #333;
+
+.logo img {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.main-nav {
+    display: flex;
+    gap: 25px;
+}
+
+.main-nav a {
+    color: white;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-    padding: 8px 18px;
-    border-radius: 6px;
-    transition: background 0.2s, color 0.2s;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 15px;
+    border-radius: 20px;
+    position: relative;
+    transition: color 0.3s, background-color 0.3s;
+    overflow: hidden;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
-.top-row a:hover {
-    background: #e0e7ff;
-    color: #1976d2;
+
+.main-nav a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #fff;
+}
+
+.main-nav a:hover::before {
+    width: 100%;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 900px) {
+    .main-nav {
+        display: none; /* 画面が小さいときは非表示 */
+    }
+    .top-header {
+        justify-content: flex-end; /* ハンバーガーメニューが右なのでロゴは消す */
+    }
+    .logo {
+        display: none;
+    }
+}
+
+@media (min-width: 901px) {
+    .hamburger {
+        display: none !important; /* 画面が大きいときはハンバーガーを非表示 */
+    }
 }
 
 /* 三本線だよん */

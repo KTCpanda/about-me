@@ -9,6 +9,10 @@ body {
     position: relative;
     overflow: hidden;
     padding-bottom: 50px; /* 余白 */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .image-section::before {
