@@ -1,0 +1,102 @@
+.intro-section {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 60px;
+    max-width: 950px;
+    padding: 40px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.intro-section:last-child {
+    border-bottom: none;
+}
+
+/* 2つ目以降のセクションで画像を右側に配置するためのスタイル */
+.intro-section.image-right {
+    flex-direction: row-reverse;
+}
+
+.intro-image {
+    flex: 1;
+    max-width: 350px;
+    min-width: 280px;
+    text-align: center;
+    border: 3px dashed rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-style: italic;
+    font-size: 1.1rem;
+    font-weight: bold;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.intro-image:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.intro-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.intro-text {
+    flex: 2;
+    color: #333;
+}
+
+.intro-text h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #4a90e2;
+    padding-bottom: 10px;
+}
+
+.intro-text p {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: #555;
+}
+
+.intro-section.text-only .intro-text {
+    flex: none;
+    width: 100%;
+    max-width: 800px; /* テキストの最大幅を制限 */
+    margin: 0 auto; /* 中央寄せ */
+    text-align: center;
+}
+
+.intro-section.text-only h2 {
+    display: inline-block; /* 中央寄せのためにインラインブロックに */
+    border-bottom: 3px solid #4a90e2;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .intro-section,
+    .intro-section.image-right {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 30px 0;
+    }
+    .intro-image {
+        max-width: 100%;
+        width: 100%;
+        height: 250px;
+    }
+    .intro-text h2 {
+        font-size: 2rem;
+    }
+}
