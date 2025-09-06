@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     gap: 50px;
-    margin-top: 60px;
+    margin: 60px auto 0;
     max-width: 950px;
     padding: 40px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -58,8 +58,21 @@
     color: #2c3e50;
     margin-top: 0;
     margin-bottom: 20px;
-    border-bottom: 3px solid #4a90e2;
-    padding-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.intro-text h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 80%;
+    background-color: #4a90e2;
+    border-radius: 4px;
+    display: none; /* この行を追加して線を非表示にします */
 }
 
 .intro-text p {
@@ -78,9 +91,55 @@
 
 .intro-section.text-only h2 {
     display: inline-block; /* 中央寄せのためにインラインブロックに */
-    border-bottom: 3px solid #4a90e2;
-    padding-bottom: 10px;
+    padding-left: 0; /* 左のパディングをリセット */
+    padding-bottom: 15px;
     margin-bottom: 20px;
+}
+
+.intro-section.text-only h2::before {
+    /* 中央の見出しでは縦線は不要なため、横線に変更 */
+    top: auto;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+}
+
+/* フェードインアニメーション */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s, transform 0.8s;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.review-link {
+    position: relative;
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s;
+}
+
+.review-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(74, 144, 226, 0.5);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-out;
+}
+
+.review-link:hover::after {
+    transform: scaleX(1);
 }
 
 @media (max-width: 768px) {

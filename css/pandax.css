@@ -370,7 +370,7 @@ body {
     color: #666;
 }
 
-/* 流れ星パンダのスタイル */
+/* 流れ星パンダ */
 .shooting-stars {
     position: fixed;
     top: 0;
@@ -378,15 +378,15 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    z-index: -1; /* 背景として表示 */
+    z-index: -1; 
 }
 
 .star {
     position: absolute;
-    width: 50px; /* パンダのサイズ */
+    width: 50px; 
     height: 50px;
     animation: shooting-star 10s linear infinite;
-    animation-fill-mode: backwards; /* アニメーション開始前のスタイル */
+    animation-fill-mode: backwards;
 }
 
 .star img {
@@ -406,7 +406,7 @@ body {
     }
 }
 
-/* 個々の星の遅延と開始位置を設定 */
+
 .star:nth-child(1) {
     top: 20%;
     animation-delay: 0s;
@@ -416,7 +416,7 @@ body {
     top: 40%;
     animation-delay: 2s;
     animation-duration: 10s;
-    width: 80px; /* サイズを変える */
+    width: 80px; 
     height: 80px;
 }
 .star:nth-child(3) {
@@ -435,6 +435,10 @@ body {
     top: 80%;
     animation-delay: 8s;
     animation-duration: 9s;
+}
+
+.page-title {
+    margin-top: 50px; /* 上部の余白を追加 */
 }
 
 
