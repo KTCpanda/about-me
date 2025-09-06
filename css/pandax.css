@@ -1,23 +1,5 @@
 /* 背景の色*/
 body {
-.parent-center {
-  position: relative;
- 
-  width: 100vw;
-  height: 100vh;
-}
-
-.panda-path {
-  width: 5rem;
-  aspect-ratio: 1;
-  background: no-repeat center / contain url(./panda3.png);
-  offset-path: path('M94.2654 ... 9.02395Z');
-  animation: move 3s linear infinite;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}   
     background-color: #b9d7f5;
     
 }
@@ -38,34 +20,6 @@ body {
     position: relative;
     left: 0;
     top: 0;
-}
-
-.side-links {
-    position: fixed;
-    top: 20%;
-    right: 2%;
-    background: rgba(255,255,255,0.95);
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    padding: 16px 20px;
-    z-index: 100;
-}
-.side-links ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-.side-links li {
-    margin: 10px 0;
-}
-.side-links a {
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.2s;
-}
-.side-links a:hover {
-    color: #1976d2;
 }
 
 .top-header {
