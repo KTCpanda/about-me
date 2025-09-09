@@ -91,13 +91,13 @@
 
 .intro-section.text-only h2 {
     display: inline-block; /* 中央寄せのためにインラインブロックに */
-    padding-left: 0; /* 左のパディングをリセット */
+    padding-left: 0; 
     padding-bottom: 15px;
     margin-bottom: 20px;
 }
 
 .intro-section.text-only h2::before {
-    /* 中央の見出しでは縦線は不要なため、横線に変更 */
+   
     top: auto;
     bottom: 0;
     left: 50%;

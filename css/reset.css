@@ -14,11 +14,7 @@
 /* Document */
 /* ============================================ */
 
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- * 3. Remove gray overlay on links for iOS.
- */
+
 
 html {
   line-height: 1.15; /* 1 */
@@ -26,27 +22,21 @@ html {
   -webkit-tap-highlight-color: transparent; /* 3 */
 }
 
-/* Sections */
-/* ============================================ */
 
-/**
- * Remove the margin in all browsers.
- */
+
+
 
 body {
   margin: 0;
 }
 
-/**
- * Render the `main` element consistently in IE.
- */
+
 
 main {
   display: block;
 }
 
-/* Vertical rhythm */
-/* ============================================ */
+
 
 p,
 table,
@@ -60,8 +50,6 @@ dl {
   margin: 0;
 }
 
-/* Headings */
-/* ============================================ */
 
 h1,
 h2,
@@ -74,8 +62,7 @@ h6 {
   margin: 0;
 }
 
-/* Lists (enumeration) */
-/* ============================================ */
+
 
 ul,
 ol {
@@ -84,8 +71,7 @@ ol {
   list-style: none;
 }
 
-/* Lists (definition) */
-/* ============================================ */
+
 
 dt {
   font-weight: bold;
@@ -95,13 +81,7 @@ dd {
   margin-left: 0;
 }
 
-/* Grouping content */
-/* ============================================ */
 
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
 
 hr {
   box-sizing: content-box; /* 1 */
@@ -113,10 +93,7 @@ hr {
   color: inherit;
 }
 
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
+
 
 pre {
   font-family: monospace, monospace; /* 1 */
@@ -127,12 +104,7 @@ address {
   font-style: inherit;
 }
 
-/* Text-level semantics */
-/* ============================================ */
 
-/**
- * Remove the gray background on active links in IE 10.
- */
 
 a {
   background-color: transparent;
@@ -140,28 +112,20 @@ a {
   color: inherit;
 }
 
-/**
- * 1. Remove the bottom border in Chrome 57-
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
+
 
 abbr[title] {
   text-decoration: underline dotted; /* 2 */
 }
 
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
+
 
 b,
 strong {
   font-weight: bolder;
 }
 
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
+
 
 code,
 kbd,
@@ -170,18 +134,13 @@ samp {
   font-size: inherit; /* 2 */
 }
 
-/**
- * Add the correct font size in all browsers.
- */
+
 
 small {
   font-size: 80%;
 }
 
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
+
 
 sub,
 sup {
@@ -199,12 +158,7 @@ sup {
   top: -0.5em;
 }
 
-/* Replaced content */
-/* ============================================ */
 
-/**
- * Prevent vertical alignment issues.
- */
 
 svg,
 img,
@@ -215,13 +169,7 @@ iframe {
 }
 
 /* Forms */
-/* ============================================ */
 
-/**
- * Reset form fields to make them styleable.
- * 1. Make form elements stylable across systems iOS especially.
- * 2. Inherit text-transform from parent.
- */
 
 button,
 input,
@@ -241,9 +189,7 @@ textarea {
   text-transform: inherit; /* 2 */
 }
 
-/**
- * Correct cursors for clickable elements.
- */
+
 
 button,
 [type="button"],
@@ -259,9 +205,7 @@ button:disabled,
   cursor: default;
 }
 
-/**
- * Improve outlines for Firefox and unify style with input elements & buttons.
- */
+
 
 :-moz-focusring {
   outline: auto;
@@ -293,105 +237,74 @@ legend {
   padding: 0;
 }
 
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
+
 
 progress {
   vertical-align: baseline;
 }
 
-/**
- * Remove the default vertical scrollbar in IE 10+.
- */
+
 
 textarea {
   overflow: auto;
 }
 
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
+
 
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
-/**
- * Correct the outline style in Safari.
- */
+
 
 [type="search"] {
   outline-offset: -2px; /* 1 */
 }
 
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
+
 
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Fix font inheritance.
- */
+
 
 ::-webkit-file-upload-button {
   -webkit-appearance: button; /* 1 */
   font: inherit; /* 2 */
 }
 
-/**
- * Fix appearance for Firefox
- */
+
 [type="number"] {
   -moz-appearance: textfield;
 }
 
-/**
- * Clickable labels
- */
+
 
 label[for] {
   cursor: pointer;
 }
 
-/* Interactive */
-/* ============================================ */
 
-/*
- * Add the correct display in Edge, IE 10+, and Firefox.
- */
 
 details {
   display: block;
 }
 
-/*
- * Add the correct display in all browsers.
- */
+
 
 summary {
   display: list-item;
 }
 
-/*
- * Remove outline for editable content.
- */
+
 
 [contenteditable]:focus {
   outline: auto;
 }
 
-/* Tables */
-/* ============================================ */
 
-/**
-1. Correct table border color inheritance in all Chrome and Safari.
-*/
 
 table {
   border-color: inherit; /* 1 */
