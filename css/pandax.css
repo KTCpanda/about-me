@@ -7,6 +7,14 @@ body {
 .osusume-page {
     background-color: #20163f;
 }
+/* 好きなことページ専用の背景画像 */
+.sukinakoto-page {
+    background-image: url('../img/a-nya-.jpg');
+    background-size: cover; /* 画面全体を覆うように調整 */
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; /* スクロールしても背景を固定 */
+}
 /* mp4のスタイル */
 #bg-video {
     position: fixed;
