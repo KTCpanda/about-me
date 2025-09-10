@@ -3,7 +3,22 @@ body {
     background-color: #b9d7f5;
     
 }
-
+/*neon専用背景だお*/
+.osusume-page {
+    background-color: #20163f;
+}
+#bg-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* neon説明の下に置くために */
+    object-fit: cover;
+}
 /* 中央寄せ */
 .center-container {
     display: flex;
@@ -12,6 +27,7 @@ body {
     justify-content: center;
     min-height: 100vh;
     position: relative;
+    z-index: 1;
 }
 
 #clickImage {
@@ -86,61 +102,10 @@ body {
     width: 100%;
 }
 
-/* レスポンシブ対応 */
-@media (max-width: 900px) {
-    .main-nav {
-        display: none; /* 画面が小さいときは非表示 */
-    }
-    .top-header {
-        justify-content: flex-end; /* ハンバーガーメニューが右なのでロゴは消す */
-    }
-    .logo {
-        display: none;
-    }
-}
-
-@media (min-width: 901px) {
-    .hamburger {
-        display: none !important; /* 画面が大きいときはハンバーガーを非表示 */
-    }
-}
-
-/* 三本線だよん */
-.hamburger {
-    position: fixed;
-    top: 18px;
-    right: 24px;
-    width: 36px;
-    height: 36px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-    z-index: 200;
-}
-.hamburger span {
-    display: block;
-    height: 5px;
-    width: 100%;
-    background: #333;
-    border-radius: 3px;
-    transition: 0.3s;
-}
-
-/* ハンバーガーがopenになった時のスタイル */
-.hamburger.open span:nth-child(1) {
-    transform: translateY(15.5px) rotate(45deg);
-}
-.hamburger.open span:nth-child(2) {
-    opacity: 0;
-}
-.hamburger.open span:nth-child(3) {
-    transform: translateY(-15.5px) rotate(-45deg);
-}
 
 
 
-/* なかみ */
+/* ぱんだクリックしてまわるやつ */
 .side-menu {
     position: fixed;
     top: 0;
