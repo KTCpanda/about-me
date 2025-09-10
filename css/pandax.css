@@ -7,6 +7,7 @@ body {
 .osusume-page {
     background-color: #20163f;
 }
+/* mp4のスタイル */
 #bg-video {
     position: fixed;
     top: 50%;
