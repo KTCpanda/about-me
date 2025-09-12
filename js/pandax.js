@@ -22,7 +22,7 @@ img.addEventListener("click", function () {
     isSecondImage = true;
     if (statusText) { // statusText要素が存在する場合のみ処理
       statusText.textContent = "🙂 ON"; 
-      statusText.style.color = "white"; 
+      
     }
 
   } else {
