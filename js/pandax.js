@@ -1,11 +1,11 @@
 const img = document.getElementById("clickImage");
-const leftMenu = document.getElementById("leftMenu"); // 左メニューを取得
+const leftMenu = document.getElementById("leftMenu"); // 左メニュー取得
 const rightMenu = document.getElementById("rightMenu"); 
 const UpMenu = document.getElementById("UpMenu");
 const DownMenu = document.getElementById("DownMenu");
 const moe1 = document.getElementById("moe1");
 const moe2 = document.getElementById("moe2");
-const statusText = document.getElementById("statusText"); // ステータステキスト要素を取得
+const statusText = document.getElementById("statusText"); // ステータステキスト要素
 
 let isSecondImage = false;
 
@@ -21,7 +21,8 @@ img.addEventListener("click", function () {
     moe2.style.display = "flex";
     isSecondImage = true;
     if (statusText) { // statusText要素が存在する場合のみ処理
-      statusText.textContent = "ON"; // テキストをONに変更
+      statusText.textContent = "🙂 ON"; 
+      statusText.style.color = "green"; 
     }
   } else {
     
@@ -33,8 +34,9 @@ img.addEventListener("click", function () {
     moe1.style.display = "none";
     moe2.style.display = "none";
     isSecondImage = false;
-    if (statusText) { // statusText要素が存在する場合のみ処理
-      statusText.textContent = "OFF"; // テキストをOFFに変更
+    if (statusText) { 
+      statusText.textContent = "🙁 OFF"; 
+      statusText.style.color = "red"; 
     }
   }
 });
