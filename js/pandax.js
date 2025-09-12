@@ -24,6 +24,7 @@ img.addEventListener("click", function () {
       statusText.textContent = "🙂 ON"; 
       statusText.style.color = "yellowgreen"; 
     }
+    
   } else {
     
     img.src = "img/panda3.png"; // 1枚目の画像 (pandaman2.png)  // 2枚目→1枚目に戻す
