@@ -34,13 +34,9 @@
     font-size: 1.1rem;
     font-weight: bold;
     overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.intro-image:hover {
-    transform: scale(1.03);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
+
 
 .intro-image img {
     width: 100%;
